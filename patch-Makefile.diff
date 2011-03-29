@@ -1,0 +1,20 @@
+--- a/Makefile.orig	2011-01-31 05:45:28.000000000 +0100
++++ b/Makefile	2011-01-31 13:22:28.000000000 +0100
+@@ -290,7 +290,7 @@
+ sharedir = $(prefix)/share
+ gitwebdir = $(sharedir)/gitweb
+ template_dir = share/git-core/templates
+-htmldir = share/doc/git-doc
++htmldir = share/doc/git-core
+ ifeq ($(prefix),/usr)
+ sysconfdir = /etc
+ ETC_GITCONFIG = $(sysconfdir)/gitconfig
+@@ -1239,7 +1239,7 @@
+ 	ifdef NO_R_TO_GCC_LINKER
+ 		# Some gcc does not accept and pass -R to the linker to specify
+ 		# the runtime dynamic library path.
+-		CC_LD_DYNPATH = -Wl,-rpath,
++		CC_LD_DYNPATH = -L
+ 	else
+ 		CC_LD_DYNPATH = -R
+ 	endif
