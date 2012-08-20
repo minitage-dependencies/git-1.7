@@ -1,20 +1,20 @@
-diff -ur git-1.7.4.2/Makefile git-1.7.4.2.new/Makefile
---- git-1.7.4.2/Makefile	2011-03-27 05:50:32.000000000 +0200
-+++ git-1.7.4.2.new/Makefile	2011-03-29 02:31:09.000000000 +0200
-@@ -2025,13 +2025,13 @@
+diff -ur git-1.7.7/Makefile git-1.7.7.new/Makefile
+--- git-1.7.7/Makefile	2011-09-30 23:51:08.000000000 +0200
++++ git-1.7.7.new/Makefile	2011-11-16 11:51:44.000000000 +0100
+@@ -2073,13 +2073,13 @@
  		$(LIBS) $(CURL_LIBCURL) $(EXPAT_LIBEXPAT)
  
  $(LIB_FILE): $(LIB_OBJS)
 -	$(QUIET_AR)$(RM) $@ && $(AR) rcs $@ $(LIB_OBJS)
-+	$(QUIET_AR)$(RM) $@ && $(AR) rcs $@ $(LIB_OBJS) && ranlib $@
++	$(QUIET_AR)$(RM) $@ && $(AR) rcs $@ $(LIB_OBJS) && ranlib $@ 
  
  $(XDIFF_LIB): $(XDIFF_OBJS)
 -	$(QUIET_AR)$(RM) $@ && $(AR) rcs $@ $(XDIFF_OBJS)
-+	$(QUIET_AR)$(RM) $@ && $(AR) rcs $@ $(XDIFF_OBJS) && ranlib $@
++	$(QUIET_AR)$(RM) $@ && $(AR) rcs $@ $(XDIFF_OBJS) && ranlib $@ 
  
  $(VCSSVN_LIB): $(VCSSVN_OBJS)
 -	$(QUIET_AR)$(RM) $@ && $(AR) rcs $@ $(VCSSVN_OBJS)
-+	$(QUIET_AR)$(RM) $@ && $(AR) rcs $@ $(VCSSVN_OBJS) && ranlib $@
++	$(QUIET_AR)$(RM) $@ && $(AR) rcs $@ $(VCSSVN_OBJS) && ranlib $@ 
  
  doc:
  	$(MAKE) -C Documentation all
